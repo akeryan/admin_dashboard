@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    
+}
+
+.sidebar {
+    width: 200px;
+    background-color:aquamarine;
+}
+
+.sidebar .header {
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 15px
+}
+
+.sidebar .header span {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar .toolbox {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 15px 30px;
+}
+
+.toolbox-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.toolbox-item img {
+    width: 15px;
+}
+
+.toolbox-item p {
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+
+.sidebar .aux {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 15px 30px;
+}
+
+.aux-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aux-item img {
+    width: 15px;
+}
+
+.aux-item p {
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+
+/* || MAIN SECTION ============================================= */
+
+.main {
+    background-color: chocolate;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* || MAIN HEADER SECTION--------------------------------------- */
+
+.main .header {
+    background-color: red;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main .header .container {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-icon {
+    width: 15px;
+}
+
+.search-bar {
+    /* width: 500px; */
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: lightgrey;
+    padding: 0px 15px;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+
+/* || MAIN CONTENT SECTION-------------------------------------- */
+
+.main .content {
+    background-color: gray;
+    flex-grow: 1;
+}
