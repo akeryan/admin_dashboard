@@ -5,11 +5,18 @@
 
 body {
     display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-color: lightgrey;
 }
 
 .sidebar {
     min-width: 200px;
-    background-color:darkolivegreen;
+    background-color: #052f47;
+    z-index: 1;
+}
+
+.title {
+    color: #052f47;
 }
 
 .sidebar .header {
@@ -33,8 +40,12 @@ body {
 .sidebar .toolbox {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 15px 15px 30px;
+    gap: 3px;
+    padding: 15px 0px 30px;
+}
+
+.toolbox-item:hover {
+    box-shadow: 0 0 10px #10f0e5;
 }
 
 .sidebar p {
@@ -45,6 +56,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+    padding: 5px 15px;
 }
 
 .toolbox-item img,
@@ -64,17 +76,20 @@ body {
 .sidebar .aux {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 15px 15px 30px;
+    gap: 3px;
+    padding: 15px 0px 30px;
 }
 
 .aux-item {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 5px 15px
 }
 
-
+.aux-item:hover {
+    box-shadow: 0 0 10px #10f0e5;
+}
 
 .aux-item p {
     text-transform: capitalize;
@@ -84,7 +99,6 @@ body {
 /* || MAIN SECTION ============================================= */
 
 .main {
-    background-color: chocolate;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -93,11 +107,14 @@ body {
 /* || MAIN HEADER SECTION--------------------------------------- */
 
 .main .header {
-    background-color: white;
+    /* background-color: white; */
+    background-image: linear-gradient(30grad, rgb(243, 42, 166), rgb(124, 29, 231), #10f0e5);
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     padding: 15px 40px;
+    box-shadow: 0px 0px 15px grey;
+    color: #052f47;
 }
 
 .main .header .upper-container {
@@ -119,7 +136,7 @@ body {
 }
 
 .search-form {
-    max-width: 500px;
+    max-width: 600px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -127,7 +144,7 @@ body {
 }
 
 .search-bar {
-    height: 25px;
+    height: 30px;
     border-radius: 20px;
     border: none;
     background-color: lightgrey;
@@ -137,6 +154,7 @@ body {
 
 .search-bar:focus{
     outline: none;
+	box-shadow: 0 0 10px white;
 }
 
 .bell-icon {
@@ -151,6 +169,11 @@ body {
 
 .user-bar .user-icon {
     width: 30px;
+}
+
+.user-bar p {
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 .lower-container {
@@ -176,6 +199,7 @@ body {
 .avatar-container .user-name {
     font-weight: bold;
     font-size: 1.2rem;
+    text-transform: none;
 }
 
 .avatar-container .message {
@@ -193,6 +217,14 @@ body {
     border: none;
     border-radius: 20px;
     align-self: center;
+    background-color: #052f47;
+    color: white;
+    font-weight: bold;
+}
+
+.header-btn-container .btn:hover {
+    box-shadow: 0 0 10px white;
+    background-color: #074a70;
 }
 
 .main .avatar {
@@ -204,7 +236,6 @@ body {
 /* || MAIN CONTENT SECTION-------------------------------------- */
 
 .main .active-window {
-    background-color: lightgrey;
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -226,14 +257,15 @@ body {
     width: 230px;
     box-sizing: border-box;
     gap: 20px;
+    flex-shrink: 0;
 }
 
 .block > .title ,
-.cards-container .title {
+.cards-container > .title {
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: capitalize;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 
@@ -265,6 +297,7 @@ body {
 
 .trending .user img {
     width: 35px;
+    height: 35px;
 }
 
 .trending .user {
@@ -292,7 +325,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    /* row-gap: 20px; */
 }
 
 .cards-wrapper .card {
@@ -303,8 +335,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-left: 8px solid gold;
+    border-left: 8px solid rgb(243, 42, 166);
     gap: 20px;
+}
+
+.card .title {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .card .toolbar {
