@@ -17,7 +17,15 @@ body {
     transform: scale(1.2);
 }
 
+.title.clickable:hover,
+.name.clickable:hover {
+    transform: scale(1.02);
+    text-decoration: underline;
+}
 
+.clickable:hover {
+    cursor: pointer;
+}
 
 .sidebar {
     min-width: 200px;
@@ -118,7 +126,7 @@ body {
 
 .main .header {
     /* background-color: white; */
-    background-image: linear-gradient(30grad, rgb(243, 42, 166), rgb(124, 29, 231), #10f0e5);
+    background-image: linear-gradient(30grad, #f32aa6, rgb(124, 29, 231), #10f0e5);
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
@@ -206,14 +214,14 @@ body {
     justify-content: space-between;
 }
 
-.avatar-container .user-name {
+.avatar-container .user.name {
     font-weight: bold;
     font-size: 1.2rem;
     text-transform: none;
 }
 
 .avatar-container .message {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .header-btn-container {
