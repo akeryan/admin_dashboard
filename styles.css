@@ -9,6 +9,16 @@ body {
     background-color: lightgrey;
 }
 
+.user.icon.clickable:hover {
+    transform: scale(1.1);
+}
+
+.icon.clickable:hover {
+    transform: scale(1.2);
+}
+
+
+
 .sidebar {
     min-width: 200px;
     background-color: #052f47;
@@ -125,7 +135,7 @@ body {
     gap: 20px;
 }
 
-.search-icon {
+.search.icon {
     width: 24px;
     padding-top: 5px;
 }
@@ -152,12 +162,12 @@ body {
     flex: 1;
 }
 
-.search-bar:focus{
+.search-bar:focus, .search-bar:hover{
     outline: none;
 	box-shadow: 0 0 10px white;
 }
 
-.bell-icon {
+.bell.icon {
     width: 20px;
 }
 
@@ -167,7 +177,7 @@ body {
     gap: 20px;
 }
 
-.user-bar .user-icon {
+.user-bar .user.icon {
     width: 30px;
 }
 
@@ -227,7 +237,7 @@ body {
     background-color: #074a70;
 }
 
-.main .avatar {
+.avatar-container .user.icon {
     width: 40px;
     height: 40px;
 } 
