@@ -31,6 +31,11 @@ body {
     min-width: 200px;
     background-color: #052f47;
     z-index: 1;
+    padding-top: 15px;
+}
+
+.sidebar .logo {
+    width: 35px;
 }
 
 .title {
@@ -59,7 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    padding: 15px 0px 30px;
+    padding: 40px 0px 30px;
 }
 
 .toolbox-item:hover {
@@ -360,6 +365,20 @@ body {
 .card .title {
     text-transform: capitalize;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+a:visited { text-decoration: none; color:#052f47; }
+a:hover { text-decoration: none; color:#052f47; }
+a:focus { text-decoration: none; color:#052f47; }
+a:hover, a:active { text-decoration: none; color:#052f47 }
+
+.card .project-image {
+    width: 220px;
     margin-bottom: 10px;
 }
 
